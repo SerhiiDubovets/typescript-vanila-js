@@ -1,26 +1,19 @@
-//string
-let firstName: string;
-firstName = "Bob"
+// object
+const obj:object ={};
+const obj1:{} ={};
 
-//number
-let num: number;
-num = 10
-
-//boolean
-let bool: boolean;
-bool = true
-
-//undefined
-let undef: undefined;
-
-//null
-let nul: null;
-
-//any
-let anyValue: any;
-
-//unknown
-let unknownValue: unknown;
-
-//void
-let voidValue: void;
+const data:{
+   id: number;
+   price: number;
+   permission: string[],
+   details: {
+     title: string;
+     description?: string;
+   }
+} = {  id: 1,
+   price: 10.99,
+   permission: ['read', 'write'],
+   details: {
+     title: 'New product',
+     description: 'This is awesome product!'
+   }}
