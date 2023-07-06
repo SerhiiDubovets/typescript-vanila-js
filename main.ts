@@ -1,19 +1,8 @@
-// object
-const obj:object ={};
-const obj1:{} ={};
+let arrString: string[];
+arrString = ["Bob", "Bill"]
 
-const data:{
-   id: number;
-   price: number;
-   permission: string[],
-   details: {
-     title: string;
-     description?: string;
-   }
-} = {  id: 1,
-   price: 10.99,
-   permission: ['read', 'write'],
-   details: {
-     title: 'New product',
-     description: 'This is awesome product!'
-   }}
+let arrNumber: number[];
+arrNumber=[1,2,3,4,5,6,7,8]
+
+let arrObj: { name: string }[];
+arrObj = [{name:"Bob"}, {name:"Bill"}]
