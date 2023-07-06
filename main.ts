@@ -1,8 +1,6 @@
-let arrString: string[];
-arrString = ["Bob", "Bill"]
+//картеж
 
-let arrNumber: number[];
-arrNumber=[1,2,3,4,5,6,7,8]
+let fixed: [string, number, null];
 
-let arrObj: { name: string }[];
-arrObj = [{name:"Bob"}, {name:"Bill"}]
+fixed = ['Text', 10, null];
+
