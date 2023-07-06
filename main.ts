@@ -1,28 +1,30 @@
-function getChannel(name:string):{name:string}{
-return {name}
+class Car {
+name: string;
+price: number;
+constructor (name: string, price: number){
+   this.name = name;
+   this.price = price;
+}
+public getInfo():string{
+   return `name: ${this.name} - price: ${this.price}`
+}
+private getName():string{
+   return `name: ${this.name} `
+}
+protected getPrice():string{
+   return `price: ${this.price}`
+}
 }
 
-getChannel("Bob")
+new Car("BMW", 100000).getInfo()
+// new Car("BMW", 100000).getName() не раборает так как приватный
+// new Car("BMW", 100000).getPrice() не раборает может только в наследовании
 
-//arrow function
-const getChannelName=(name:string):{name:string}=>{
-   return {name}
-};
-getChannelName("Bill")
-
- //with type
- type TypeChannelReturn = {name:string}
- type TypeChannelName = (name: string) => TypeChannelReturn;
- const getChannelName2:TypeChannelName=(name)=>{
-   return {name}
-};
- 
-//функциональные перегрузки
-function getCar(name:string):string;
-function getCar(name:string, price:number):string;
-function getCar(name:string, price?: number):string{
-   return price ? `Name ${name}` : `name ${name}`
+class Bus extends Car {
+   constructor(name: string, price: number){
+      super(name, price);
+   }
+   test(){
+      return this.getInfo()
+   }
 }
-
-const car1 = getCar("bmw");
-const car2 = getCar("bmw", 100000);
